@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+   font-family: 'Nunito', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: all .2s linear;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body {
+   background: #eee;
+}
+
+img {
+   max-width: 200px;
+   max-height: 200px;
+   object-position: bottom center;
+   filter: drop-shadow(30px 10px 4px #444);
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 3rem 2rem;
+}
+
+.container .title {
+   font-size: 4rem;
+   color: #444;
+   margin-bottom: 3rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container .home {
+   font-size: 3.2rem;
+   color: #111;
+   text-transform: uppercase;
+   text-align: left;
+}
+
+.home:hover{
+   color: #fff;
+}
+
+.container .games-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 2rem;
+}
+
+.container .games-container .game {
+   text-align: center;
+   padding: 2rem 2rem;
+   background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   outline: .1rem solid #ccc;
+   outline-offset: -1.5rem;
+   cursor: pointer;
+}
+
+.container .games-container .game:hover {
+   outline: .2rem solid #222;
+   outline-offset: 0;
+}
+
+.container .games-container .game img {
+   height: 25rem;
+}
+
+.container .games-container .game:hover img {
+   transform: scale(.9);
+}
+
+.container .games-container .game h3 {
+   padding: .5rem 0;
+   font-size: 2rem;
+   color: #444;
+}
+
+.container .games-container .game:hover h3 {
+   color: #27ae60;
+}
+
+.container .games-container .game .price {
+   font-size: 2rem;
+   color: #444;
+}
+
+.games-preview {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0, 0, 0, .8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.games-preview .preview {
+   display: none;
+   padding: 2rem;
+   text-align: center;
+   background: #fff;
+   position: relative;
+   margin: 2rem;
+   width: 40rem;
+}
+
+.games-preview .preview.active {
+   display: inline-block;
+}
+
+.games-preview .preview img {
+   height: 30rem;
+}
+
+.games-preview .preview .fa-times {
+   position: absolute;
+   top: 1rem;
+   right: 1.5rem;
+   cursor: pointer;
+   color: #444;
+   font-size: 4rem;
+}
+
+.games-preview .preview h3 {
+   color: #444;
+   padding: .5rem 0;
+   font-size: 2.5rem;
+}
+
+.games-preview .preview .stars {
+   padding: 1rem 0;
+   font-size: 1.7rem;
+}
+
+.games-preview .preview .stars i {
+   color: #27ae60;
+}
+
+.games-preview .preview .stars span {
+   color: #999;
+}
+
+.games-preview .preview p {
+   line-height: 1.5;
+   padding: 1rem 0;
+   font-size: 1.3rem;
+   color: #777;
+}
+
+.games-preview .preview .price {
+   padding: 1rem 0;
+   font-size: 2.5rem;
+   color: #27ae60;
+}
+
+.games-preview .preview .price {
+   padding: 1rem 0;
+   font-size: 2.5rem;
+   color: #27ae60;
+}
+
+.games-preview .preview .buttons {
+   display: flex;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+   margin-top: 1rem;
+}
+
+.games-preview .preview .buttons a {
+   flex: 1 1 16rem;
+   padding: 1rem;
+   font-size: 1.8rem;
+   color: #444;
+   border: .1rem solid #444;
+}
+
+.games-preview .preview .buttons a.show {
+   background: #444;
+   color: #fff;
+}
+
+.games-preview .preview .buttons a.show:hover {
+   background: #111;
+}
+
+.games-preview .preview .buttons a.site:hover {
+   background: #444;
+   color: #fff;
+}
+
+
+@media (max-width:991px) {
+
+   html {
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px) {
+
+   .games-preview .preview img {
+      height: 25rem;
+   }
+
+}
+
+@media (max-width:450px) {
+
+   html {
+      font-size: 50%;
+   }
+
+}
